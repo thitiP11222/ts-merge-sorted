@@ -1,27 +1,22 @@
-# 0) ดาวน์โหลดโปรเจกต์
-
-**ดาวน์โหลด:** [ts-merge-three-sorted.zip](sandbox:/mnt/data/ts-merge-three-sorted.zip)
-
-แตกไฟล์แล้วพร้อมรันได้ทันที
+# Typescript project with unit test:
 
 ```
-ts-merge-three-sorted/
+ts-merge-sorted/
 ├─ src/
-│  ├─ merge.ts        # ฟังก์ชัน merge (O(n))
-│  └─ index.ts        # เดโม่รันจาก CLI
+│  ├─ merge.ts        # merge function (O(n))
+│  └─ index.ts        # CLI demo
 ├─ test/
-│  └─ merge.test.ts   # ยูนิตเทสต์ (Vitest)
+│  └─ merge.test.ts   # unit tests (Vitest)
 ├─ package.json
 ├─ tsconfig.json
-└─ README.md          # คำอธิบาย + วิธีรัน
+└─ README.md          # setup & usage instructions
 ```
 
 ---
 
+## 1 Install Dependencies
 
-# 1) วิธีติดตั้ง Dependencies
-
-เปิดเทอร์มินัลในโฟลเดอร์โปรเจกต์
+Open the terminal inside the project folder and run:
 
 ```bash
 npm install
@@ -29,38 +24,44 @@ npm install
 
 ---
 
-# 2) วิธีรัน Unit Test
+## 2 Run Unit Tests
 
 ```bash
-npm test         # รันเทสต์ครั้งเดียว
-npm run test:watch  # ดูผลแบบ watch mode
+npm test           # run all tests once
+npm run test:watch # watch mode (auto re-run on save)
 ```
 
-เทสต์ครอบคลุม: กรณีว่าง, ค่าติดลบ, ค่าซ้ำ, ช่วงคละกว้าง, ทั้งหมดเท่ากัน ฯลฯ
+The tests cover:
+
+* empty arrays
+* negative values
+* duplicates
+* mixed ranges
+* identical values
 
 ---
 
-# 3) วิธีรันเดโม่ (ดูผลลัพธ์จริง)
+## 3 Run Demo (see actual output)
 
 ```bash
 npm start
 ```
 
-จะพิมพ์ผลลัพธ์ของการรวม 3 อาร์เรย์ตัวอย่างบนคอนโซล
+It will print the merged result of three sample arrays to the console.
 
 ---
 
-# 4) วิธีบิลด์เป็น JS (optional)
+## 4 Build to JavaScript (optional)
 
 ```bash
 npm run build
 ```
 
-ไฟล์จะออกที่ `dist/`
+The compiled files will appear in the `dist/` directory.
 
 ---
 
-# 5) โค้ดหลัก
+## 5 Main Code
 
 `src/merge.ts`
 
@@ -89,5 +90,3 @@ export function merge(collection_1: number[], collection_2: number[], collection
 ```
 
 ---
-
-
