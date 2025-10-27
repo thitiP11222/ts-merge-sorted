@@ -1,0 +1,27 @@
+{
+  "name": "ts-merge-three-sorted",
+  "version": "1.0.0",
+  "description": "Merge three integer arrays where two are ascending and one is descending; output ascending without using sort().",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "ts-node src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "merge",
+    "k-way-merge",
+    "typescript",
+    "algorithms"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
+  }
+}
