@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+out/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+vitest.log
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage (if using coverage reports)
+coverage/
