@@ -21,7 +21,8 @@ describe('merge three arrays (two ascending, one descending) without sort()', ()
     const c1 = [-5, -1, 0, 0, 3];
     const c2 = [-4, 0, 2, 2];
     const c3 = [5, 4, 2, 0, -1, -6]; // descending
-    expect(merge(c1, c2, c3)).toEqual([-6,-5,-4,-1,-1,0,0,0,2,2,2,3,4,5]);
+      expect(merge(c1, c2, c3)).toEqual([-6,-5,-4,-1,-1,0,0,0,0,2,2,2,3,4,5]);
+
   });
 
   it('handles all equal elements', () => {
